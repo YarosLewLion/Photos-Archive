@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Photo Archive</title>
+</head>
+<body>
+    <h1>Photo Archive</h1>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <label>Upload Photo:</label>
+        <input type="file" name="file" accept="image/*"/>
+        <button type="submit">Upload</button>
+    </form>
+    <br/>
+    <a href="/list">View All Photos</a>
+    <br/>
+    <a href="/download">Download All Photos as ZIP</a>
+</body>
+</html>

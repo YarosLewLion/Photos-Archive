@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Photo List</title>
+</head>
+<body>
+    <h1>Photo List</h1>
+    <form method="post" action="/delete">
+        <table border="1">
+            <tr>
+                <th>Select</th>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr th:each="photo : ${photos}">
+                <td><input type="checkbox" name="photoIds" th:value="${photo.id}"/></td>
+                <td th:text="${photo.id}"></td>
+                <td th:text="${photo.name}"></td>
+            </tr>
+        </table>
+        <br/>
+        <button type="submit">Delete Selected</button>
+    </form>
+    <br/>
+    <a href="/">Back to Upload</a>
+</body>
+</html>
